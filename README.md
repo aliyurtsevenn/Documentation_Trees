@@ -1,4 +1,4 @@
-# Documentation_Trees
+# Binary Recursive Partitioning
 
 Binary Recursive Partitioning (BRP) is a non-parametric method for analyzing high-dimensional data that has become increasingly popular in psychological research. BRP is a decision tree-based method that recursively partitions the data into subsets based on the values of predictor variables, with the goal of maximizing the homogeneity of the response variable within each subset. The resulting tree can be used for prediction, variable selection, and interpretation.
 
@@ -6,8 +6,12 @@ BRP has several advantages over traditional linear models in psychological resea
 
 BRP has been used in a variety of psychological research applications, including clinical psychology, social psychology, and cognitive psychology. For example, BRP has been used to predict treatment outcomes in depression, to identify risk factors for suicide attempts, and to model the effects of social support on health outcomes.
 
-BRP can be implemented using a variety of software packages, including R, SAS, and SPSS. In R, the rpart package provides a user-friendly interface for fitting decision trees using BRP. The package also provides tools for visualizing and interpreting the resulting trees.
-
 To evaluate the predictive accuracy of a decision tree, researchers can use cross-validation, which involves randomly dividing the data into training and testing sets, fitting the tree to the training set, and then evaluating its performance on the testing set. Cross-validation can provide an estimate of the generalizability of the tree to new data.
+
+Gini index is a measure of impurity or diversity used in decision tree-based methods like Binary Recursive Partitioning (BRP). The gini index measures the probability of misclassifying a randomly chosen observation from a given subset of the data. A gini index of 0 indicates that all observations in the subset belong to the same class, while a gini index of 1 indicates that the observations are evenly split between two or more classes.
+
+The idea behind BRP is to recursively partition the data into subsets based on the values of predictor variables, with the goal of maximizing the homogeneity of the response variable within each subset. This is done by selecting the predictor variable and split point that minimize the gini index of the resulting subsets. The process is repeated for each subset until a stopping criterion is met, such as a minimum number of observations in each subset or a maximum tree depth. The resulting tree can be used for prediction, variable selection, and interpretation. The tree can also be pruned to improve its generalizability to new data.
+
+For regression problem, variance of between each split group of a variable is mostly checked. When the lowest variance for the group is obtained, the best split for the given predictor variable can be determined. This way, many different trees with a different predictor variables can be constructed. Best tree split is selected for the prediction purposes.
 
 In conclusion, BRP is a powerful and flexible method for analyzing high-dimensional data in psychological research. Its ability to handle non-linear relationships and interactions between predictors, as well as its intuitive and interpretable models, make it a valuable tool for researchers in a variety of fields.
